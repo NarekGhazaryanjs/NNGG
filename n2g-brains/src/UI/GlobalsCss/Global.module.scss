@@ -1,0 +1,27 @@
+
+$main-background-color: blue;
+
+%container {
+    width: 80%;
+    margin-left: 10%;
+    height: 30vh;
+    margin-top: 2px;
+    background-color: $main-background-color;
+}
+
+.about-list {
+    @extend %container;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-list-items {
+    color: white;
+    line-height: 1.5;
+}
+
+.about-main-block {
+    @extend %container
+}
