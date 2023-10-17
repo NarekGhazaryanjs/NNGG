@@ -1,7 +1,10 @@
-const Card = (props) => {
+const Card = ({
+  className,
+  children
+}) => {
     return (
-        <section className={this.props.className || 'container'}>
-            {props.children}
+        <section className={className || 'container'}>
+            {children}
         </section>
     )
 }
