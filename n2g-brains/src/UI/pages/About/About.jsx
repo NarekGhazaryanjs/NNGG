@@ -11,7 +11,7 @@ const About = () => {
     {Phone: '096691949'},
     {email: 'n2g-brains@gmail.com'}
    ]
-   
+
    return (
       <Card >
           <Block>
@@ -31,7 +31,7 @@ const About = () => {
              </List>
 
              <Block className={classes['about-main-block']}>
-
+               
              </Block>
           </Block>
 
