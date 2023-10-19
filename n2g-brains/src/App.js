@@ -1,12 +1,12 @@
 import { Fragment } from 'react';
 import './App.css';
 import { Route, Routes, Link } from "react-router-dom"
-import About from './UI/pages/About/About';
+import Contacts from './UI/pages/Contacts/Contacts';
 
 const App = () => {
   return (
     <Fragment>
-        
+        <Contacts />
     </Fragment>
   )
 }
