@@ -81,3 +81,28 @@ $whiting-color: white;
    font-size: $main-font-size;
    background-color: $main-background-color;
 }
+
+
+.team-list  {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 24px;
+}
+
+
+.team-list-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: inset 0px 0px 20px rgba(134, 134, 134, 0.523), 0px 0px 10px rgba(128, 128, 128, 0.548);
+}
+
+
+.team-member-image {
+    border-radius: 50%;
+}

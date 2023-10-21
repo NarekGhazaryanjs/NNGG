@@ -2,7 +2,8 @@ import Block from "../../../Components/Block/Block";
 import Imager from "../../../Components/Imager/Imager";
 import List from "../../../Components/List/List";
 import Listitem from "../../../Components/Listitem/Listitem";
-import members from './Members'
+import members from './Members';
+import classes from '../../GlobalsCss/Global.module.scss'
 
 const Team = ({
 
@@ -10,12 +11,11 @@ const Team = ({
 
 
     return (
-        <Block>
-            <List>
+            <List className={classes['team-list']}>
                {members.map(member => {
                 return (
-                    <Listitem key={member.id}>
-                        <Imager src={member.src} />
+                    <Listitem className={classes['team-list-items']} key={member.id}>
+                        <Imager className={classes['team-member-image']} src={member.src} />
                         <br />
                         <span> name: {member.name} </span>
                         <br />
@@ -26,7 +26,6 @@ const Team = ({
                 )
                })}
             </List>
-        </Block>
     )
 }
 

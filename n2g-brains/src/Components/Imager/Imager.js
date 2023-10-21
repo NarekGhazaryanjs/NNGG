@@ -1,10 +1,11 @@
 const Imager = ({
     width,
     src,
-    alt
+    alt,
+    className
 }) => {
     return (
-        <img width={width || '200px'} src={src} alt={alt || 'some image'} />
+        <img className={className} width={width || '200px'} src={src} alt={alt || 'some image'} />
     )
 }
 
