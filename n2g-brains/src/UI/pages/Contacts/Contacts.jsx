@@ -6,12 +6,14 @@ import classes from '../../GlobalsCss/Global.module.scss';
 import Footer from "../../uiComponents/Footer/Footer";
 
 const Contacts = () => {
-
+     
     const aboutList = [
         { Address: 'Vagharshyan 21/33' },
         { Phone: '096691949' },
         { email: 'n2g-brains@gmail.com' }
     ]
+
+    
 
     return (
         <Card >
@@ -21,6 +23,7 @@ const Contacts = () => {
                         for (let aboutListItem in aboutListItems) {
                             return (
                                 <Listitem
+                                    key={Math.random()}
                                     className={classes['about-list-items']}
                                 >
                                     {aboutListItem}: {aboutListItems[aboutListItem]}
