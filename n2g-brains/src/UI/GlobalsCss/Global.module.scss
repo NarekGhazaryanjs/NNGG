@@ -82,6 +82,12 @@ $whiting-color: white;
    background-color: $main-background-color;
 }
 
+@media screen and (max-width: 768px) {
+    .courses-container-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 
 .team-list  {
     width: 80%;
@@ -110,4 +116,9 @@ $whiting-color: white;
 
 .team-member-image {
     border-radius: 50%;
+}
+
+
+.courses-image {
+    width: 250px;
 }

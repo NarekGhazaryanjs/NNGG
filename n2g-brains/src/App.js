@@ -9,8 +9,8 @@ const App = () => {
   return (
     <Fragment>
         {/* <Contacts /> */}
-        {/* <Courses /> */}
-        <Team />
+        <Courses />
+        {/* <Team /> */}
     </Fragment>
   )
 }
