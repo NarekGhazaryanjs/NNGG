@@ -103,6 +103,10 @@ $whiting-color: white;
     width: max-content;
 }
 
+.courses-image {
+    width: 250px;
+}
+
 @media screen and (max-width: 768px) {
     .courses-container-list {
         grid-template-columns: repeat(1, 1fr);
@@ -140,9 +144,14 @@ $whiting-color: white;
 }
 
 
-.courses-image {
-    width: 250px;
+@media screen and (max-width: 768px) {
+    .team-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
+
+
+
 
 
 .martop-container {
