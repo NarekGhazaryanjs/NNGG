@@ -3,30 +3,21 @@ import Card from "../../../Components/Card/Card";
 import List from "../../../Components/List/List";
 import Listitem from "../../../Components/Listitem/Listitem";
 import classes from '../../GlobalsCss/Global.module.scss';
-import Footer from "../../uiComponents/Footer/Footer";
+import contactsdata from "./ContactsData";
 
 const Contacts = () => {
-     
-    const aboutList = [
-        { Address: 'Vagharshyan 21/33' },
-        { Phone: '096691949' },
-        { email: 'n2g-brains@gmail.com' }
-    ]
-
-    
-
     return (
         <Card >
             <Block>
                 <List className={classes['about-list']}>
-                    {aboutList.map(aboutListItems => {
-                        for (let aboutListItem in aboutListItems) {
+                    {contactsdata.map(contacts => {
+                        for (let contactItem in contacts) {
                             return (
                                 <Listitem
                                     key={Math.random()}
                                     className={classes['about-list-items']}
                                 >
-                                    {aboutListItem}: {aboutListItems[aboutListItem]}
+                                    {contactItem}: {contacts[contactItem]}
                                 </Listitem>
                             )
                         }

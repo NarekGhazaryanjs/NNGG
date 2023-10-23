@@ -1,9 +1,7 @@
 import Block from "../../../Components/Block/Block";
 import classes from '../../GlobalsCss/Global.module.scss'
 
-const Footer = ({
-
-})  => {
+const Footer = ()  => {
     return (
         <Block className={classes['footer']}>
            <p> 
