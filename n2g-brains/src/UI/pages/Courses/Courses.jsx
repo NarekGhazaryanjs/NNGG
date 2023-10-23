@@ -41,7 +41,6 @@ const Courses = ({
                 </List>
             </Block>
 
-            <Footer />
 
         </Wrapper>
     )

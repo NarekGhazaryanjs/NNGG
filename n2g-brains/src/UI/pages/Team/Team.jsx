@@ -8,8 +8,6 @@ import classes from '../../GlobalsCss/Global.module.scss'
 const Team = ({
 
 }) => {
-
-
     return (
             <List className={classes['team-list']}>
                {members.map(member => {
