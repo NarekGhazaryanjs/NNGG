@@ -15,13 +15,15 @@ const Courses = () => {
     }
 
     const filterCoursesByNameHandler = (item) => {
-        return item.name.toLowerCase().includes(searchName.toLowerCase())
+        return item.name.toLowerCase().includes(searchName.toLowerCase()) || item.details.toLowerCase().includes(searchName.toLowerCase())  
     }
+
+    let index = 0
 
     return (
         <Wrapper>
             <Block className={classes['courses-search-container']}>
-                <label> search courses by name  </label>
+                <label> search courses by name or languages </label>
                 <input onChange={changeSearchName}  type="text" />
             </Block>
            
@@ -31,12 +33,12 @@ const Courses = () => {
                         return (
                             <Listitem className={classes['courses-container-list-item']} key={course.id}>
                                 <Imager className={classes['courses-image']} src={course.src} />
-                                <span> name: {course.name} </span>
-                                {course.details ? <span> {course.details} </span> : null }
-                                <span> days: {course.days} </span>
-                                <span> level: {course.level} </span>
-                                <span> price: {course.price} </span>
-                                <span> duration: {course.duration} </span>
+                                {Object.keys(course).map(el => {
+                                   index++
+                                   return (
+                                     el === 'src' ? null : <span key={course['name'] + index}> {el}: {course[el]} </span>
+                                   )
+                                })}
                             </Listitem>
                         )
                     })}

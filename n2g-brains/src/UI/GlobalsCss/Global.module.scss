@@ -82,6 +82,15 @@ $whiting-color: white;
    background-color: $main-background-color;
 }
 
+.courses-container-list-item span {
+    width: 100%;
+    height: 40px;
+    text-wrap: wrap;
+    margin: 5px 0;
+    text-overflow: ellipsis;
+    display: flex;
+    justify-content: center;
+}
 
 .courses-search-container {
     display: flex; 

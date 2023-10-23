@@ -26,6 +26,7 @@ const coursesArray = [
     {
         src: `/CoursesImages/frontend.jpg`, 
         name: 'SMM', 
+        details: '',
         days: 2, 
         level: "beginner", 
         price: 45_000, 
@@ -36,6 +37,7 @@ const coursesArray = [
     {
         src: `/CoursesImages/frontend.jpg`, 
         name: 'Graphic Design',
+        details: '',
         days: 2,
         level: "beginner", 
         price: 35_000, 
@@ -57,7 +59,7 @@ const coursesArray = [
     {
         src: `/CoursesImages/frontend.jpg`, 
         name: 'Full Stack', 
-        details:  'React, Node.js, Express.js', 
+        details:  'React, Express.js', 
         days: 3, 
         level: "beginner", 
         price: 55_000, 
@@ -68,6 +70,7 @@ const coursesArray = [
     {
         src: `/CoursesImages/frontend.jpg`, 
         name: 'UX/UI', 
+        details: '',
         days: 3, 
         level: "beginner", 
         price: 55_000, 
