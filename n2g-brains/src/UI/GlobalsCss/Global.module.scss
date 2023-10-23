@@ -82,6 +82,18 @@ $whiting-color: white;
    background-color: $main-background-color;
 }
 
+
+.courses-search-container {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.courses-search-container > * {
+    width: max-content;
+}
+
 @media screen and (max-width: 768px) {
     .courses-container-list {
         grid-template-columns: repeat(1, 1fr);

@@ -1,3 +1,4 @@
+import { useRef, useState } from "react"
 import Block from "../../../Components/Block/Block"
 import Imager from "../../../Components/Imager/Imager"
 import List from "../../../Components/List/List"
@@ -7,11 +8,26 @@ import Wrapper from "../../uiComponents/Wrapper/Wrapper"
 import coursesArray from "./CoursesData"
 
 const Courses = () => {
+    const [searchName, setSearchName] = useState('');
+
+    const changeSearchName = (event) => {
+        setSearchName(event.target.value)
+    }
+
+    const filterCoursesByNameHandler = (item) => {
+        return item.name.toLowerCase().includes(searchName.toLowerCase())
+    }
+
     return (
         <Wrapper>
+            <Block className={classes['courses-search-container']}>
+                <label> search courses by name  </label>
+                <input onChange={changeSearchName}  type="text" />
+            </Block>
+           
             <Block className={classes['courses-container']}>
                 <List className={classes['courses-container-list']}>
-                    {coursesArray.map(course => {
+                    {coursesArray.filter(filterCoursesByNameHandler).map(course => {
                         return (
                             <Listitem className={classes['courses-container-list-item']} key={course.id}>
                                 <Imager className={classes['courses-image']} src={course.src} />
