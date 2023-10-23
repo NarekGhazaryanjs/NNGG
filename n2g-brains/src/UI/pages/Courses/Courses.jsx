@@ -14,7 +14,7 @@ const Courses = () => {
         setSearchName(event.target.value)
     }
 
-    const filterCoursesByNameHandler = (item) => {
+    const filterCoursesByCourseOrLanguageNameHandler = (item) => {
         return item.name.toLowerCase().includes(searchName.toLowerCase()) || item.details.toLowerCase().includes(searchName.toLowerCase())  
     }
 
@@ -29,14 +29,14 @@ const Courses = () => {
            
             <Block className={classes['courses-container']}>
                 <List className={classes['courses-container-list']}>
-                    {coursesArray.filter(filterCoursesByNameHandler).map(course => {
+                    {coursesArray.filter(filterCoursesByCourseOrLanguageNameHandler).map(course => {
                         return (
                             <Listitem className={classes['courses-container-list-item']} key={course.id}>
                                 <Imager className={classes['courses-image']} src={course.src} />
                                 {Object.keys(course).map(el => {
                                    index++
                                    return (
-                                     el === 'src' ? null : <span key={course['name'] + index}> {el}: {course[el]} </span>
+                                     el === 'src'  || el === 'id' || course[el] === '' ?  null : <span key={course['name'] + index}> {el}: {course[el]} </span>
                                    )
                                 })}
                             </Listitem>

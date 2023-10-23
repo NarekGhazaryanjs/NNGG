@@ -5,18 +5,20 @@ import teamMembers from './TeamData';
 import classes from '../../GlobalsCss/Global.module.scss'
 
 const Team = () => {
+    let index = 0;
     return (
             <List className={classes['team-list']}>
                {teamMembers.map(teamMember => {
                 return (
                     <Listitem className={classes['team-list-items']} key={teamMember.id}>
                         <Imager className={classes['team-member-image']} src={teamMember.src} />
-                        <br />
-                        <span> name: {teamMember.name} </span>
-                        <br />
-                        <span> surname: {teamMember.surname} </span>
-                        <br />
-                        <span> name: {teamMember.position} </span>
+                        {Object.keys(teamMember).map(key => {
+                            index++
+                            return (
+                                key === 'src'  || key === "id" || teamMember[key] === '' ?  null : <span style={{marginTop: '5px'}} key={teamMember['name'] + index}> {key}: {teamMember[key]} </span>
+                                
+                            )
+                        })}
                     </Listitem>
                 )
                })}

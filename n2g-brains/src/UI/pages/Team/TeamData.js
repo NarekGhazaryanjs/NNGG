@@ -1,10 +1,54 @@
+let id = 1;
+
 const teamMembers = [
-    {name: 'Narek', surname: 'Ghazaryan', position: 'Senior Fullstack developer',  src: `/TeamImages/Narek-Ghazaryan.jpg`, id: 1},
-    {name: 'Hrach', surname: 'Papyan', position: 'Junior Frontend developer', src: 'TeamImages/hrach-papyan.jpg', id: 2},
-    {name: 'Narek', surname: 'Ghazaryan', position: 'Senior Fullstack developer',  src: `/TeamImages/Narek-Ghazaryan.jpg`, id: 3},
-    {name: 'Hrach', surname: 'Papyan', position: 'Junior Frontend developer', src: 'TeamImages/hrach-papyan.jpg', id: 4},
-    {name: 'Narek', surname: 'Ghazaryan', position: 'Senior Fullstack developer',  src: `/TeamImages/Narek-Ghazaryan.jpg`, id: 5},
-    {name: 'Hrach', surname: 'Papyan', position: 'Junior Frontend developer', src: 'TeamImages/hrach-papyan.jpg', id: 6},
+    {
+        name: 'Narek', 
+        surname: 'Ghazaryan', 
+        position: 'Senior Fullstack developer',  
+        src: `/TeamImages/Narek-Ghazaryan.jpg`, 
+        id: id++
+    },
+
+    {
+        name: 'Hamlet', 
+        surname: 'Hakhverdyan', 
+        position: 'Junior Frontend developer', 
+        src: 'TeamImages/ham-hakhverdyan.jpg', 
+        id: id++
+    },
+
+    {
+        name: 'Ani', 
+        surname: 'Mikaelyan', 
+        position: 'Project Manager',  
+        src: `/TeamImages/ani-mikayelyan.jpg`, 
+        id: id++
+    },
+
+    {
+        name: 'Tatev', 
+        surname: 'Hakhverdyan', 
+        position: 'Graphic Designer, UX/UI', 
+        src: 'TeamImages/tatev-hakhverdyan.jpg', 
+        id: id++
+    },
+
+    {
+        name: 'Hrachya', 
+        surname: 'Martirosyan', 
+        position: 'junior Fullstack developer',  
+        src: `/TeamImages/hrachya-martirosyan.jpg`, 
+        id: id++
+    },
+
+
+    {
+        name: 'Hrach', 
+        surname: 'Papyan', 
+        position: 'Junior Frontend developer', 
+        src: 'TeamImages/hrach-papyan.jpg', 
+        id: id++
+    },
   
 ]
 

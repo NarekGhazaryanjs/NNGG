@@ -89,6 +89,17 @@ const coursesArray = [
         duration: "6 months", 
         id: id++
     },
+
+    {
+        src: `/CoursesImages/frontend.jpg`, 
+        name: 'Backend', 
+        details:  'PHP, LARAVEL', 
+        days: 2, 
+        level: "beginner", 
+        price: 50_000, 
+        duration: "6 months", 
+        id: id++
+    },
 ]
 
 export default coursesArray
