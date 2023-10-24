@@ -15,29 +15,32 @@ const Courses = () => {
     }
 
     const filterCoursesByCourseOrLanguageNameHandler = (item) => {
-        return item.name.toLowerCase().includes(searchName.toLowerCase()) || item.details.toLowerCase().includes(searchName.toLowerCase())  
+        return item.name.toLowerCase().includes(searchName.toLowerCase()) || item.details.toLowerCase().includes(searchName.toLowerCase())
     }
 
-    let index = 0
-
+   
     return (
         <Wrapper>
             <Block className={classes['courses-search-container']}>
-                <label> search courses by name or languages </label>
-                <input onChange={changeSearchName}  type="text" />
+                <form>
+                    <label htmlFor="search"> search courses by name or languages </label>
+                    <br />
+                    <input id="search" onChange={changeSearchName} type="text" />
+                </form>
+
             </Block>
-           
+
             <Block className={classes['courses-container']}>
                 <List className={classes['courses-container-list']}>
                     {coursesArray.filter(filterCoursesByCourseOrLanguageNameHandler).map(course => {
                         return (
                             <Listitem className={classes['courses-container-list-item']} key={course.id}>
-                                <Imager className={classes['courses-image']} src={course.src} />
-                                {Object.keys(course).map(el => {
-                                   index++
-                                   return (
-                                     el === 'src'  || el === 'id' || course[el] === '' ?  null : <span key={course['name'] + index}> {el}: {course[el]} </span>
-                                   )
+                                <Imager width='311px' height='auto' className={classes['courses-image']} src={course.src} />
+                                {Object.keys(course).map((el, index )=> {
+                                    
+                                    return (
+                                        el === 'src' || el === 'id' || course[el] === '' ? null : <span key={course['name'] + index}> {el}: {course[el]} </span>
+                                    )
                                 })}
                             </Listitem>
                         )

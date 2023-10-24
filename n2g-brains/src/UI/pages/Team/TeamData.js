@@ -43,12 +43,39 @@ const teamMembers = [
 
 
     {
-        name: 'Hrach', 
-        surname: 'Papyan', 
-        position: 'Junior Frontend developer', 
-        src: 'TeamImages/hrach-papyan.jpg', 
+        name: 'Albert', 
+        surname: 'Nahapetyan', 
+        position: 'junior Fullstack developer', 
+        src: 'TeamImages/albert-nahapetyan.jpg', 
         id: id++
     },
+
+
+    {
+        name: 'Hayko', 
+        surname: 'Kirakosyan', 
+        position: 'Middle Fullstack developer', 
+        src: 'TeamImages/hayko-kirakosyan.jpg', 
+        id: id++
+    },
+
+
+    {
+        name: 'Henrik', 
+        surname: 'Armenakyan', 
+        position: 'Senior Frontend developer', 
+        src: 'TeamImages/henrik-armenakyan.jpg', 
+        id: id++
+    },
+
+    {
+        name: 'Hovhannes', 
+        surname: 'baghdasaryan', 
+        position: 'junior fullstack developer', 
+        src: 'TeamImages/hovhannes-baghdasaryan.jpg', 
+        id: id++
+    },
+  
   
 ]
 
