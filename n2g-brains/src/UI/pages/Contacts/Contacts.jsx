@@ -2,19 +2,22 @@ import Block from "../../../Components/Block/Block";
 import Card from "../../../Components/Card/Card";
 import List from "../../../Components/List/List";
 import Listitem from "../../../Components/Listitem/Listitem";
+import UniqueKeys from "../../../Helpers/UniqueKeys/UniqueKeys";
 import classes from '../../GlobalsCss/Global.module.scss';
 import contactsdata from "./ContactsData";
 
 const Contacts = () => {
     return (
+
         <Card >
             <Block>
                 <List className={classes['about-list']}>
-                    {contactsdata.map(contacts => {
+                    {contactsdata.map((contacts) => {
                         for (let contactItem in contacts) {
+                            const uniqueKey = UniqueKeys()
                             return (
                                 <Listitem
-                                    key={Math.random()}
+                                    key={uniqueKey}
                                     className={classes['about-list-items']}
                                 >
                                     {contactItem}: {contacts[contactItem]}

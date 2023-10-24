@@ -6,6 +6,7 @@ import Listitem from "../../../Components/Listitem/Listitem"
 import classes from '../../GlobalsCss/Global.module.scss'
 import Wrapper from "../../uiComponents/Wrapper/Wrapper"
 import coursesArray from "./CoursesData"
+import UniqueKeys from "../../../Helpers/UniqueKeys/UniqueKeys"
 
 const Courses = () => {
     const [searchName, setSearchName] = useState('');
@@ -36,10 +37,10 @@ const Courses = () => {
                         return (
                             <Listitem className={classes['courses-container-list-item']} key={course.id}>
                                 <Imager width='311px' height='auto' className={classes['courses-image']} src={course.src} />
-                                {Object.keys(course).map((el, index )=> {
-                                    
+                                {Object.keys(course).map((el) => {
+                                    const uniqueKey = UniqueKeys()
                                     return (
-                                        el === 'src' || el === 'id' || course[el] === '' ? null : <span key={course['name'] + index}> {el}: {course[el]} </span>
+                                        el === 'src' || el === 'id' || course[el] === '' ? null : <span key={uniqueKey}> {el}: {course[el]} </span>
                                     )
                                 })}
                             </Listitem>
