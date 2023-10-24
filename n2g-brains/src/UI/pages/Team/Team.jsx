@@ -12,7 +12,7 @@ const Team = () => {
                 return (
                     <Listitem className={classes['team-list-items']} key={teamMember.id}>
                         <Imager className={classes['team-member-image']} src={teamMember.src} />
-                        {Object.keys(teamMember).map((key, index) => {
+                        {Object.keys(teamMember).map(key => {
                             const uniqueKey = UniqueKeys()
                             return (
                                 key === 'src'  || key === "id" || teamMember[key] === '' ?  null : <span style={{marginTop: '5px'}} key={uniqueKey}> {key}: {teamMember[key]} </span>
