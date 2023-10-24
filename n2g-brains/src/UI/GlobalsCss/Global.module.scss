@@ -12,6 +12,17 @@ $whiting-color: white;
     background-color: $main-background-color;
 }
 
+%box-shadowing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: inset 0px 0px 10px rgba(134, 134, 134, 0.523), 0px 0px 5px rgba(128, 128, 128, 0.548);
+    transition: 1s;
+}
+
 .about-list {
     @extend %container;
     display: flex;
@@ -69,17 +80,13 @@ $whiting-color: white;
 
 
 .courses-container-list-item {
-   line-height: 1.5;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   color: $whiting-color;
-   border: 2px solid black;
-   margin-top: 10px;
-   padding: 16px;
-   border-radius: 8px;
-   font-size: $main-font-size;
-   background-color: $main-background-color;
+    @extend %box-shadowing;
+    margin: 25px;
+    transition: 0.5s;
+}
+
+.courses-container-list-item:hover {
+    transform: scale(1.07);
 }
 
 .courses-container-list-item span {
@@ -125,14 +132,7 @@ $whiting-color: white;
 
 
 .team-list-items {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 20px;
-  padding: 16px;
-  box-shadow: inset 0px 0px 10px rgba(134, 134, 134, 0.523), 0px 0px 5px rgba(128, 128, 128, 0.548);
-  transition: 1s;
+    @extend %box-shadowing;
 }
 
 .team-list-items:hover {
