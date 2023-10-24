@@ -8,24 +8,26 @@ import contactsdata from "./ContactsData";
 
 const Contacts = () => {
     return (
-
         <Card >
             <Block>
                 <List className={classes['about-list']}>
-                    {contactsdata.map((contacts) => {
-                        for (let contactItem in contacts) {
-                            const uniqueKey = UniqueKeys()
-                            return (
-                                <Listitem
-                                    key={uniqueKey}
-                                    className={classes['about-list-items']}
-                                >
-                                    {contactItem}: {contacts[contactItem]}
-                                </Listitem>
-                            )
-                        }
-
-                    })}
+                    {contactsdata.map(contacts => {
+                                const keys = Object.keys(contacts);
+                                const uniqueKey = UniqueKeys();
+                                return keys.map(key => {
+                                    return (
+                                        <Listitem
+                                            key={uniqueKey}
+                                            className={classes['about-list-items']}
+                                        >
+                                            {key}: {contacts[key]}
+                                        </Listitem>
+                                    )
+                                })
+                                
+                            }
+                        
+                    )}
                 </List>
             </Block>
 

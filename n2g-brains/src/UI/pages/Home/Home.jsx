@@ -1,8 +1,6 @@
 import Wrapper from "../../uiComponents/Wrapper/Wrapper"
 
-const Home = ({
-
-}) => {
+const Home = () => {
     return (
         <Wrapper>
             <p> Home page </p>

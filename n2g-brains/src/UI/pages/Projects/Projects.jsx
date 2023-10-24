@@ -1,8 +1,6 @@
 import Wrapper from "../../uiComponents/Wrapper/Wrapper"
 
-const Projects = ({
-
-}) => {
+const Projects = () => {
    return (
     <Wrapper>
         <p> Projects page </p>
