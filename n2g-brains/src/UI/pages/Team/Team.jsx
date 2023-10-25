@@ -5,18 +5,17 @@ import teamMembers from './TeamData';
 import classes from '../../GlobalsCss/Global.module.scss';
 import { useId } from "react";
 
-
 const Team = () => {
-    const uniqueKey = useId()
+    const uniqueId = useId();
     return (
             <List className={classes['team-list']}>
                {teamMembers.map(teamMember => {
                 return (
                     <Listitem className={classes['team-list-items']} key={teamMember.id}>
                         <Imager className={classes['team-member-image']} src={teamMember.src} />
-                        {Object.keys(teamMember).map((key,index) => {
+                        {Object.keys(teamMember).map((key, index) => {
                             return (
-                                key === 'src'  || key === "id" || teamMember[key] === '' ?  null : <span style={{marginTop: '5px'}} key={`${uniqueKey}-${index}`}> {key}: {teamMember[key]} </span>
+                                key === 'src'  || key === "id" || teamMember[key] === '' ?  null : <span style={{marginTop: '5px'}} key={`${uniqueId}-${index}`}> {key}: {teamMember[key]} </span>
                             )
                         })}
                     </Listitem>
@@ -26,5 +25,4 @@ const Team = () => {
     )
 }
 
-
-export default Team
+export default Team;

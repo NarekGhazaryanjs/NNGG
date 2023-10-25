@@ -1,23 +1,23 @@
+import { useId } from "react";
 import Block from "../../../Components/Block/Block";
 import Card from "../../../Components/Card/Card";
 import List from "../../../Components/List/List";
 import Listitem from "../../../Components/Listitem/Listitem";
-import UniqueKeys from "../../../Helpers/UniqueKeys/UniqueKeys";
 import classes from '../../GlobalsCss/Global.module.scss';
 import contactsdata from "./ContactsData";
 
 const Contacts = () => {
+    const uniqeId = useId();
     return (
         <Card >
             <Block>
                 <List className={classes['about-list']}>
                     {contactsdata.map(contacts => {
                                 const keys = Object.keys(contacts);
-                                const uniqueKey = UniqueKeys();
-                                return keys.map(key => {
+                                return keys.map((key,index) => {
                                     return (
                                         <Listitem
-                                            key={uniqueKey}
+                                            key={`${uniqeId}-${index}`}
                                             className={classes['about-list-items']}
                                         >
                                             {key}: {contacts[key]}
