@@ -17,13 +17,9 @@ const Courses = () => {
     const filterCoursesByCourseOrLanguageNameHandler = (item) => {
         return item.name.toLowerCase().includes(searchName.toLowerCase()) || item.details.toLowerCase().includes(searchName.toLowerCase())
     }
-    
 
     const useGetUnique =  useId();
 
-    
-
-   
     return (
         <Wrapper>
             <Block className={classes['courses-search-container']}>
