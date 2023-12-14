@@ -12,15 +12,18 @@ $whiting-color: white;
     background-color: $main-background-color;
 }
 
-%box-shadowing {
+%team-boxing {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+%box-shadowing {
     border-radius: 20px;
     padding: 16px;
     box-shadow: inset 0px 0px 10px rgba(134, 134, 134, 0.523), 0px 0px 5px rgba(128, 128, 128, 0.548);
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .about-list {
@@ -86,7 +89,7 @@ $whiting-color: white;
 }
 
 .courses-container-list-item:hover {
-    transform: scale(1.07);
+    transform: scale(1.05);
 }
 
 .courses-container-list-item span {
@@ -133,6 +136,7 @@ $whiting-color: white;
 
 .team-list-items {
     @extend %box-shadowing;
+    @extend %team-boxing
 }
 
 .team-list-items:hover {
@@ -150,10 +154,6 @@ $whiting-color: white;
         grid-template-columns: repeat(1, 1fr);
     }
 }
-
-
-
-
 
 .martop-container {
     margin-top: 16vh;
